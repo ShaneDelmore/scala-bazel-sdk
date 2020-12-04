@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public class MainJava {
     public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println("Runtime class version is " + System.getProperty("java.version"));
+        System.out.println("Runtime version is " + System.getProperty("java.version"));
 
         String classVersion = getClassVersion();
         System.out.println("Binary class version is " + classVersion);
@@ -13,6 +13,9 @@ public class MainJava {
 
     private static String getClassVersion() throws IOException, InterruptedException {
         String workspace = System.getenv("BUILD_WORKSPACE_DIRECTORY");
+
+        System.out.println(System.getProperties());
+
         String cmd = System.getProperty("java.home") + "/bin/javap -verbose -classpath " + workspace + "/bazel-bin/MainJava.jar MainJava";
 
         Process process = Runtime.getRuntime().exec(cmd);
