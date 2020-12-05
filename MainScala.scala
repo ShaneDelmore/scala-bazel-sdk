@@ -2,9 +2,9 @@ import java.io.{BufferedReader, InputStreamReader}
 
 object MainScala {
   def main(args: Array[String]): Unit = {
-    println(s"Runtime class version is ${System.getProperty("java.version")}")
+    println(s"Runtime version is ${System.getProperty("java.version")}")
 
-    println(System.getProperties)
+    println(System.getProperty("java.home"))
 
     println(s"Binary class version is $getClassVersion")
   }

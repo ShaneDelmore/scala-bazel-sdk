@@ -5,5 +5,5 @@ build --javabase=//tools/jdk:jdk8
 build --host_javabase=//tools/jdk:jdk11
 
 build --java_toolchain=@bazel_tools//tools/jdk:toolchain_java8
-build --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+build --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java8
 
